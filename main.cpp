@@ -33,9 +33,10 @@ int main ()
     tests [2] = "1967-12-23 14:23:02";
     tests [3] = "1967-12-23 04:23:02";
     tests [4] = "1967-12-23 01:35:07";
-    for (int i = 1; i < 5; i++)
+    for (unsigned int i = 1; i < 5; i++)
     {
         long int d = timediff (tests [0], tests [i]);
-        std::cout << "time difference = " << prettytime (d) << std::endl;
+        std::cout << "time difference (" << tests [0] << " - " <<
+            tests [i] << ") = " << prettytime (d) << std::endl;
     }
 }
