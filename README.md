@@ -7,9 +7,9 @@ are `datetime.h` and `datetime.cpp`, which are intended to be taken and bundled
 into any other code. Just `#include "datetime.h"` to give access to the main
 functions:
 
-1. convert_datetime (std::string t)
-2. timediff (std::string t1, std::string t2)
-3. prettytime (long int t)
+1. `convert_datetime (std::string t)`
+2. `timediff (std::string t1, std::string t2)`
+3. `prettytime (long int t)`
 
 The functionality is demonstrated with `make`, which gives the following output
 ```
