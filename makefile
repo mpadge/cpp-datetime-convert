@@ -8,7 +8,7 @@ SRCS=datetime.cpp main.cpp
 all: main clean run
 
 main:
-	    $(CXX) $(SRCS) -o $(TARGET)
+	    $(CXX) $(SRCS) $(CPPFLAGS) -o $(TARGET)
 
 run: $(TARGET)
 	./$(TARGET)

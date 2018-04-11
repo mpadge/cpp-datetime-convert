@@ -12,6 +12,6 @@ std::string convert_date (std::string ymd);
 std::string convert_time (std::string hms);
 void zero_pad (std::string &t);
 
-std::string prettytime (int t);
-int timediff (std::string t1, std::string t2);
-int daynum (int y, int m, int d);
+std::string prettytime (long int t);
+long int timediff (std::string t1, std::string t2);
+long int daynum (int y, int m, int d);

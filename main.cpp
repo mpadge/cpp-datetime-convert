@@ -29,13 +29,14 @@ int main ()
 
     // Demonstrate the timediff function
     tests [0] = "1967-12-23 01:34:57";
-    tests [1] = "2014-07-18 18:37:11";
+    tests [1] = "1967-12-23 01:34:57";
+    //tests [1] = "2014-07-18 18:37:11";
     tests [2] = "1967-12-23 14:23:02";
     tests [3] = "1967-12-23 04:23:02";
     tests [4] = "1967-12-23 01:35:07";
     for (int i = 1; i < 5; i++)
     {
-        int d = timediff (tests [0], tests [i]);
+        long int d = timediff (tests [0], tests [i]);
         std::cout << "time difference = " << prettytime (d) << std::endl;
     }
 }
