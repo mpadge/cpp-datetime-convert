@@ -6,7 +6,7 @@
 int main ()
 {
     // Demonstrate conversion from a range of formats:
-    std::vector <std::string> tests (16);
+    std::vector <std::string> tests (18);
     tests [0] = "2000-01-01 01:01:00";
     tests [1] = "2000-01-01 01:01";
     tests [2] = "2000-01-01 1:1:0";
@@ -23,6 +23,8 @@ int main ()
     tests [13] = "1/1/2000 01:01";
     tests [14] = "1/1/2000 1:1:0";
     tests [15] = "1/1/2000 1:1";
+    tests [16] = "00-01-01 01:01:00";
+    tests [17] = "67-01-01 01:01";
 
     std::cout << "Demonstration of format conversions:" << std::endl;
     for (auto t: tests)

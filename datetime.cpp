@@ -60,7 +60,12 @@ std::string convert_date (std::string ymd)
         m = s;
     }
     if (y.size () == 2)
-        y = "20" + y;
+    {
+        if (atoi (y.c_str ()) <= currentYear (2))
+            y = "20" + y;
+        else
+            y = "19" + y;
+    }
     zero_pad (m);
     zero_pad (d);
 
@@ -162,4 +167,16 @@ std::string prettytime (long int t)
     zero_pad (s);
 
     return out + s;
+}
+
+int currentYear (int digits) {
+    time_t     now = time(0);
+    struct tm  tstruct;
+    char       buf[80];
+    tstruct = *localtime(&now);
+    strftime (buf, sizeof(buf), "%Y", &tstruct);
+    std::string y = buf;
+    if (digits == 2)
+        y = y.substr (3, 2);
+    return atoi (y.c_str ());
 }
