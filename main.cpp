@@ -24,10 +24,12 @@ int main ()
     tests [14] = "1/1/2000 1:1:0";
     tests [15] = "1/1/2000 1:1";
 
+    std::cout << "Demonstration of format conversions:" << std::endl;
     for (auto t: tests)
         std::cout << "[" << t << " -> " << convert_datetime (t) << "]" << std::endl;
 
     // Demonstrate the timediff function
+    std::cout << std::endl << "Demonstration of time differences:" << std::endl;
     tests [0] = "1967-12-23 01:34:57";
     tests [1] = "2014-07-18 18:37:11";
     tests [2] = "1967-12-23 14:23:02";
