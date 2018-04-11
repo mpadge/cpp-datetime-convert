@@ -26,7 +26,7 @@ int main ()
 
     std::cout << "Demonstration of format conversions:" << std::endl;
     for (auto t: tests)
-        std::cout << "[" << t << " -> " << convert_datetime (t) << "]" << std::endl;
+        std::cout << t << " -> " << convert_datetime (t) << std::endl;
 
     // Demonstrate the timediff function
     std::cout << std::endl << "Demonstration of time differences:" << std::endl;

@@ -7,6 +7,7 @@ tmux -2 new-session -d -s $SESSION
 tmux new-window -t $SESSION:1 -k -n datetime
 tmux send-keys -t $SESSION:1 'vim datetime.h' C-m
 tmux send-keys -t $SESSION:1 ':' 'tabe datetime.cpp' C-m
+tmux send-keys -t $SESSION:1 ':' 'tabe main.cpp' C-m
 tmux send-keys -t $SESSION:1 '1gt'
 tmux split-window -h -p 50
 #tmux send-keys -t $SESSION:1 'make' C-m
